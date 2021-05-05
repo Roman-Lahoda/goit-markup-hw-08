@@ -1,0 +1,15 @@
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(var(--space-between) * (-1));
+  margin-top: calc(var(--space-between) * (-1));
+}
+
+.grid__item {
+  width: calc(
+    (100% - var(--grid-item-count) * var(--space-between)) /
+      var(--grid-item-count)
+  );
+  margin-left: var(--space-between);
+  margin-top: var(--space-between);
+}

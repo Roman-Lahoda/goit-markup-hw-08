@@ -1,0 +1,39 @@
+.our-clients {
+  --space-between: 30px;
+
+  @media screen and (max-width: 767.98px) {
+    --grid-item-count: 2;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    --grid-item-count: 3;
+  }
+
+  @media screen and (min-width: 1200px) {
+    --grid-item-count: 6;
+  }
+}
+
+.our-clients__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 92px;
+  border: 1px solid rgba(175, 177, 184, 1);
+  transition: border 250ms var(--time-function);
+
+  &:hover,
+  &:focus {
+    border: 1px solid var(--accent-color-text);
+  }
+
+  &:hover .our-clients__icon,
+  &:focus .our-clients__icon {
+    fill: var(--accent-color-text);
+  }
+}
+
+.our-clients__icon {
+  fill: var(--icon-color);
+  transition: fill 250ms var(--time-function);
+}

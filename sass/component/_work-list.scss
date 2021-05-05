@@ -1,0 +1,24 @@
+.work__list {
+  --grid-item-count: 3;
+  --space-between: 30px;
+}
+
+.work__item {
+  position: relative;
+}
+
+.work__label {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: $fw700;
+  line-height: $lh1-14;
+  text-transform: uppercase;
+  color: var(--dark-bg-color-text);
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+  left: 0;
+  right: 0;
+  bottom: 0;
+}

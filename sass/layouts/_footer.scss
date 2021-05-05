@@ -1,0 +1,26 @@
+.page-footer {
+  background-color: var(--dark-bgc);
+  color: #fff;
+  padding: 60px 0;
+}
+
+.page-footer__conteiner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.page-footer__logo {
+  color: var(--bg-color-text);
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.page-footer__social-list {
+  width: 206px;
+  margin: -10px auto 0;
+  @media screen and (min-width: 1200px) {
+    margin-top: -10px;
+    margin-left: -10px;
+  }
+}

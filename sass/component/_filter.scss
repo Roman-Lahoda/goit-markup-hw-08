@@ -1,0 +1,40 @@
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+
+  @media screen and (min-width: 1200px) {
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+}
+
+.filter__item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.filter__item {
+  margin-bottom: 15px;
+}
+
+.filter__btn {
+  font-weight: $fw500;
+  font-size: $fs16;
+  line-height: 1.62;
+  padding: 6px 22px;
+  color: var(--color-btn);
+  background-color: var(--light-bgc);
+  border: 1px solid transparent;
+  border-radius: 4px;
+  transition: color 250ms var(--time-function),
+    background-color 250ms var(--time-function),
+    box-shadow 250ms var(--time-function);
+
+  &:hover,
+  &:focus {
+    color: var(--dark-bg-color-text);
+    background-color: var(--accent-color-text);
+    cursor: pointer;
+    box-shadow: var(--box-shadow-btn);
+  }
+}

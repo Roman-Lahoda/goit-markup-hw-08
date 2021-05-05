@@ -1,0 +1,26 @@
+.socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((50% - 45px) / 2);
+    align-items: start;
+    margin-bottom: 0;
+  }
+}
+
+.socials__title {
+  color: var(--bg-color-text);
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: $lh1-14;
+  letter-spacing: 0.03em;
+  margin-bottom: 20px;
+}
