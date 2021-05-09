@@ -340,7 +340,7 @@ p {
 
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -471,6 +471,12 @@ img {
   }
 }
 
+@media screen and (max-width: 767.98px) and (max-height: 565px) {
+  .page-header__menu {
+    overflow-y: scroll;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .page-header__menu {
     flex-direction: row;
@@ -516,16 +522,8 @@ img {
   z-index: 10;
 }
 
-.icon-cross {
-  display: none;
-}
-
 .page-header__button.is-open .icon-menu {
   display: none;
-}
-
-.page-header__button.is-open .icon-cross {
-  display: block;
 }
 
 @media screen and (max-width: 767.98px) {
@@ -537,6 +535,34 @@ img {
 @media screen and (min-width: 768px) {
   .navigation {
     margin-right: auto;
+  }
+}
+
+.page-header-menu {
+  position: relative;
+}
+
+body.modal-open .page-header__button {
+  display: none;
+}
+
+.page-header__menu-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.page-header__menu-button:hover .icon-cross,
+.page-header__menu-button:focus .icon-cross {
+  fill: var(--accent-color-text);
+}
+
+@media screen and (min-width: 768px) {
+  .page-header__menu-button {
+    display: none;
   }
 }
 
@@ -1444,6 +1470,7 @@ img {
   opacity: 1;
   visibility: visible;
   transition: opacity 250ms var(--time-function), visibility 250ms var(--time-function);
+  overflow-y: scroll;
 }
 
 .backdrop.is-hidden {
@@ -1470,6 +1497,13 @@ img {
   border-radius: 4px;
   z-index: 100;
   padding: 40px;
+}
+
+@media screen and (max-height: 450px) {
+  .modal {
+    top: 0;
+    transform: translateX(-50%);
+  }
 }
 
 @media screen and (min-width: 480px) {

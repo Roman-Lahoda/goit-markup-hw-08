@@ -12,6 +12,10 @@
     z-index: 10;
     padding: 48px 40px;
     background-color: var(--dark-bg-color-text);
+    
+    @media screen and (max-height: 565px) {
+      overflow-y: scroll;
+    }
   }
 
   @media screen and (min-width: 768px) {
@@ -56,17 +60,18 @@
   z-index: 10;
 }
 
-.icon-cross {
-  display: none;
-}
+// .icon-cross {
+//   display: none;
+// }
 
 .page-header__button.is-open .icon-menu {
   display: none;
 }
 
-.page-header__button.is-open .icon-cross {
-  display: block;
-}
+// .page-header__button.is-open .icon-cross {
+//   display: block;
+//   position: fixed;
+// }
 
 .navigation {
   @media screen and (max-width: 767.98px) {
@@ -75,5 +80,33 @@
 
   @media screen and (min-width: 768px) {
     margin-right: auto;
+  }
+}
+
+
+
+.page-header-menu {
+  position: relative;
+}
+
+body.modal-open .page-header__button {
+  display: none;
+}
+
+.page-header__menu-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &:hover .icon-cross,
+  &:focus .icon-cross {
+    fill: var(--accent-color-text);
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
   }
 }
