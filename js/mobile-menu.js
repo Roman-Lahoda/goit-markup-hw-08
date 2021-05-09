@@ -11,10 +11,10 @@
   })
 
   menuBtn2Ref.addEventListener("click", () => {
-    const expanded = menuBtnRef.getAttribute("aria-expanded") === "true" || false
+    const expanded = menuBtn2Ref.getAttribute("aria-expanded") === "true" || false
     document.body.classList.toggle("modal-open")
-    menuBtnRef.classList.toggle("is-open")
-    menuBtnRef.setAttribute("aria-expanded", !expanded)
+    menuBtn2Ref.classList.toggle("is-open")
+    menuBtn2Ref.setAttribute("aria-expanded", !expanded)
     mobileMenuRef.classList.toggle("is-open")
   })
 })()
